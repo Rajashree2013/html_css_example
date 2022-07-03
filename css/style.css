@@ -1,0 +1,252 @@
+body {
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    display:grid;
+    grid-template-areas: 
+    "Header"
+    "main" "login"
+    "footer";
+    background-color:rgba(3, 31, 5, 0.507);
+    color:greenyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    grid-area: header;
+    grid-row-start: 1;
+    grid-row-end: 1 ;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-areas:"logo link rightnav" ;
+    grid-template-columns: 110px Auto 105px;
+    grid-template-rows: 60px;
+    align-items: center;
+    background-color:yellowgreen;
+    height:60px;
+}
+
+header>h1{
+    grid-area:logo;
+    display: grid;
+    text-transform:uppercase;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color:yellowgreen;
+    color: green;
+}
+
+nav>ul{
+    grid-area: link;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    align-items: left;
+}
+
+nav>ul>li{
+    display: inline-block;
+    text-decoration:none;
+    align-items: left;
+}
+
+nav>ul>li>a{
+    display:inline-flex;
+    height:50px;
+    width: 100px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-decoration:none;
+    border-radius: 10px;
+    background-color: yellowgreen; 
+    color:green;
+}
+
+nav>ul>li>a:hover {
+    color:yellowgreen;
+    background-color:green; 
+}
+
+header>a {
+    grid-area:rightnav;
+    display:inline-flex;
+    height:50px;
+    width: 100px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration:none;
+    background-color: rgba(61, 48, 35, 0.863); 
+    color:rgb(59, 13, 48)
+}
+
+header>a:hover {
+    color:yellowgreen;
+    background-color:green; 
+}
+
+main{
+    grid-area:main;
+    text-align: justify;
+    grid-row-start: 2;
+    grid-row-end: 3 ;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: auto;
+    background-color: black;    
+}
+
+main>h1{
+    grid-area: main;
+    grid-row-start: 2;
+    grid-row-end: 2 ;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+main>p{
+    margin-left: 3%;
+    margin-right: 3%;
+    
+}
+            
+article{
+    text-align: justify;
+    display:inline-block;
+    grid-column-end: 2;
+    margin-left: 3%;
+    width: 45%;
+    vertical-align:top;
+}
+
+article>img{
+    display:inline-block;
+    margin-left: 33%;
+    width: 34%;    
+
+}
+
+article:nth-child(3)>p:nth-child(3){
+    color:rgb(98, 0, 255);
+    font-weight: bold;
+}
+
+aside{
+    grid-area:aside;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    margin:10;
+    background-color:black;
+}
+
+aside>ul{
+    text-transform: capitalize;
+    list-style: none;
+}
+
+aside>ol{
+    text-transform: capitalize;
+    list-style-type: none;
+}
+
+ul>li:nth-of-type(odd){
+    color: seagreen;
+}
+
+ul>li:nth-of-type(even){
+    color: magenta;
+}
+
+ul>li>ol>li:nth-child(1){
+    color:pink;
+}
+
+ul>li>ol>li:nth-child(2){
+    color:coral;
+}
+                
+ul>li>ol>li:nth-child(3){
+    color:mediumseagreen;
+}
+
+footer{
+    grid-area: footer;
+    grid-row-start: 3;
+    grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:40px;
+    background-color: yellowgreen;
+    color:rgb(128, 15, 0);
+}
+
+main>h2{
+    margin-left:33%;
+    width: 1024px;
+    text-transform: uppercase;    
+}
+
+form{
+    display:block;
+    background-color: brown;
+    text-align: center;
+    border-radius: 10px;
+    margin-left:33%;
+    margin-right:33%;
+    margin-bottom: 7%;
+    background-color:yellowgreen;
+    align-items: center;
+    padding-top: 2%;
+
+}
+
+form>input{
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+input[type=reset]{ 
+    background-color: yellowgreen;
+    color:red;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0;
+}
+
+input[type=reset]:hover{ 
+    background-color: red;
+    color:yellow;
+}
+
+input[type=submit]{ 
+    background-color:yellowgreen;
+    color: green;  
+    text-transform: capitalize;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0;
+}
+
+input[type=submit]:hover{ 
+    color:yellow;
+    background-color: green;  
+}
+ 
+#username{
+    width: 90%;
+}
+
+#password{
+    width: 90%;
+}
